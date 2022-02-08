@@ -8,6 +8,14 @@
 
 {% block content %}
 
+{% if request.user.is_authenticated  %}
+<a href="{% url 'news:newStory' %}">Write New Story</a>
+{% else %}
+<a href="{% url 'login' %}">Sign in to write story</a>
+{% endif %}
+
+
+
 <h2>Latest News</h2>
 
 <div id="latest-stories">
@@ -28,5 +36,5 @@
   {% endif %}
 </div>
 
-<a href="{% url 'news:newStory' %}">Write New Story</a>
+
 {% endblock %}
