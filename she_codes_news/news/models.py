@@ -1,6 +1,14 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 
+CAT_CHOICES = (
+    ('cat', 'CAT'),
+    ('dog','DOG'),
+    ('horse','HORSE'),
+    ('duck','DUCK'),
+    ('other','OTHER'),
+)
+
 
 class NewsStory(models.Model):
     title = models.CharField(max_length=200)
@@ -12,5 +20,7 @@ class NewsStory(models.Model):
     )
     pub_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     content = models.TextField()
-    
+    catergory = models.CharField(max_length=6, choices=CAT_CHOICES, default='select')
+
+
 
