@@ -4,14 +4,15 @@
 
 {% if request.user.is_authenticated  %}
     
-<h1>Post</h1>
+<h1>Delete Post</h1>
+
+<h3>Delete: {{ story.title }}</h3>
 <form action="" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="submit">
+    <button>delete</button>
 </form>
 
 {% else %}
-<a>Please sign in to Edit</a>
+
 {% endif %}
 {% endblock %}

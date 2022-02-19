@@ -2,10 +2,11 @@ from django.views import generic
 from django.urls import reverse_lazy, reverse
 from .models import NewsStory
 from .forms import StoryForm
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, DeleteView
 
 class IndexView(generic.ListView):
     template_name = 'news/index.html'
+    
 
     def get_queryset(self):
         '''Return all news stories.'''
@@ -48,4 +49,10 @@ class CatergoryView(generic.ListView):
     def get_queryset(self):
         '''Return all news stories.'''
         return NewsStory.objects.filter(catergory=self.kwargs["catergory"])
+
+
+class DeletePostView(DeleteView):
+    model = NewsStory
+    template_name = 'news/delete_post.html'
+    success_url = reverse_lazy('news:index')
 

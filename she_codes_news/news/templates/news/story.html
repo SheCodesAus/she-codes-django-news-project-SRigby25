@@ -17,7 +17,14 @@
         {{ story.content|linebreaks }}
     </div>
     <h5><a href="{% url 'news:catergory' story.catergory %}"> {{ story.catergory }}</a></h5>
+
+{% if request.user.is_authenticated  %}
     <a href="{% url 'news:editstory' story.id %}">Edit</a>
+    <a href="{% url 'news:deletestory' story.id %}">Delete</a>
+{% else %}
+
+{% endif %}
+    
 </div>
 
 
