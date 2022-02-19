@@ -1,8 +1,8 @@
 from django.views import generic
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from .models import NewsStory
 from .forms import StoryForm
-
+from django.views.generic import UpdateView
 
 class IndexView(generic.ListView):
     template_name = 'news/index.html'
@@ -32,4 +32,12 @@ class AddStoryView(generic.CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-    
+class UpdateStoryView(UpdateView):
+    model = NewsStory
+    template_name = 'news/createStory.html'
+    fields = ['title', 'content', 'image', 'catergory']
+
+    def get_success_url(self):
+        story_id = self.object.id
+        return reverse ('news:story', kwargs={'pk': story_id},)
+

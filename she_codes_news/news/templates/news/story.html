@@ -17,7 +17,10 @@
         {{ story.content|linebreaks }}
     </div>
     <h5>{{ story.catergory }}</h5>
+    <a href="{% url 'news:editstory' story.id %}">Edit</a>
 </div>
+
+
 
 {% endblock %}
 
