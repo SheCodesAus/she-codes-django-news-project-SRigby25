@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}" />
+
+{% endblock %} 
+
+{% block content %}
+
+{% if request.user.is_authenticated  %}
+<a href="{% url 'news:newStory' %}">Write New Story</a>
+{% else %}
+<a href="{% url 'login' %}">Sign in to write story</a>
+{% endif %}
+
+
+
+
+
+<div id="all-stories">
+  {% if storys %}
+    {% for story in storys %}
+  {% include "./storyCard.html" with story=story %}
+  {% endfor %} {% else %}
+  <p>No stories are available.</p>
+  {% endif %}
+</div>
+
+
+{% endblock %}

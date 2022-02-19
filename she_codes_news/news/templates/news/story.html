@@ -8,20 +8,25 @@
 {% endblock %}
 
 {% block content %}
-
+current user: {{ user.id }}
+post creater: {{ story.author.id }}
 <div id="story-wrapper">
     <h2>{{ story.title }}</h2>
-    <h4>{{ story.author }}</h4>
+   
     <div id="story-content">
         <img src="{{ story.image }}">
         {{ story.content|linebreaks }}
     </div>
+    <a href="{% url 'news:author' story.author.id %}"> Click here to view other storys but this author</a>
+
+
     <h5><a href="{% url 'news:catergory' story.catergory %}"> {{ story.catergory }}</a></h5>
 
-{% if request.user.is_authenticated  %}
-    <a href="{% url 'news:editstory' story.id %}">Edit</a>
-    <a href="{% url 'news:deletestory' story.id %}">Delete</a>
-{% else %}
+{% if request.user.is_authenticated %}
+    {% if user.id == story.author.id %}
+        <a href="{% url 'news:editstory' story.id %}">Edit</a>
+        <a href="{% url 'news:deletestory' story.id %}">Delete</a>
+    {% endif %}
 
 {% endif %}
     

@@ -56,3 +56,10 @@ class DeletePostView(DeleteView):
     template_name = 'news/delete_post.html'
     success_url = reverse_lazy('news:index')
 
+class AuthorView(generic.ListView):
+    template_name = 'news/userstorys.html'
+    context_object_name = 'storys'
+
+    def get_queryset(self):
+        '''Return all news stories.'''
+        return NewsStory.objects.filter(author=self.kwargs["author"])

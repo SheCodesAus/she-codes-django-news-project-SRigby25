@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import UpdateStoryView, DeletePostView
+from .views import UpdateStoryView, DeletePostView, AuthorView
 
 
 app_name = 'news'
@@ -12,4 +12,5 @@ urlpatterns = [
     path('<int:pk>/edit-story', views.UpdateStoryView.as_view(), name='editstory'),
     path('catergory/<str:catergory>', views.CatergoryView.as_view(), name= 'catergory'),
     path('<int:pk>/deletestory', views.DeletePostView.as_view(), name='deletestory'),
+    path('userstorys/<str:author>', views.AuthorView.as_view(), name= 'author'),
 ]
