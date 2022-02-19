@@ -14,20 +14,17 @@
 <a href="{% url 'login' %}">Sign in to write story</a>
 {% endif %}
 
-
-
 <a href="{% url 'news:catergory' 'cat' %}">Cat's</a>
 <a href="{% url 'news:catergory' 'dog' %}">Dog's</a>
 <a href="{% url 'news:catergory' 'horse' %}">Horse's</a>
 <a href="{% url 'news:catergory' 'duck' %}">Duck's</a>
 <a href="{% url 'news:catergory' 'other' %}">Other</a>
-<h2>News</h2>
 
 
 
 <div id="all-stories">
-  {% if all_stories %}
-    {% for story in all_stories %}
+  {% if storys %}
+    {% for story in storys %}
   {% include "./storyCard.html" with story=story %}
   {% endfor %} {% else %}
   <p>No stories are available.</p>

@@ -13,9 +13,9 @@ class IndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['latest_stories'] = NewsStory.objects.all()[:4]
         context['all_stories'] = NewsStory.objects.all()
         return context
+    
 
 class StoryView(generic.DetailView):
     model = NewsStory
@@ -40,4 +40,12 @@ class UpdateStoryView(UpdateView):
     def get_success_url(self):
         story_id = self.object.id
         return reverse ('news:story', kwargs={'pk': story_id},)
+
+class CatergoryView(generic.ListView):
+    template_name = 'news/catergory.html'
+    context_object_name = 'storys'
+
+    def get_queryset(self):
+        '''Return all news stories.'''
+        return NewsStory.objects.filter(catergory=self.kwargs["catergory"])
 

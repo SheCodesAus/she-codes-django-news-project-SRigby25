@@ -9,7 +9,7 @@
             <h3>{{ story.title }}</h3>
             <h4>{{ story.author }}</h4>
             <h4>{{ story.pub_date }}</h4>
-            <h5>{{ story.catergory }}</h5>
+            <h5><a href="{% url 'news:catergory' story.catergory %}"> {{ story.catergory }}</a></h5>
             
         </div>
     </a>

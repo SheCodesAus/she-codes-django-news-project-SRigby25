@@ -16,7 +16,7 @@
         <img src="{{ story.image }}">
         {{ story.content|linebreaks }}
     </div>
-    <h5>{{ story.catergory }}</h5>
+    <h5><a href="{% url 'news:catergory' story.catergory %}"> {{ story.catergory }}</a></h5>
     <a href="{% url 'news:editstory' story.id %}">Edit</a>
 </div>
 
