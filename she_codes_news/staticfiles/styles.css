@@ -1,41 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 body {
-    background-color: rgb(240, 239, 2);
+    background-color: white;
 }
 
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    font-family: 'Sacramento', cursive;
 }
 
 
-
-
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Sacramento', cursive;
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
-   margin: 2px;
-   padding: 5px;
+    font-family: 'Sacramento', cursive;
+    font-size: 3rem;
+    font-style: normal;
+    margin: 2px;
+    padding: 5px;
 }
 
 h3 {
-    font-size: 2rem;
+    display: flex;
+    justify-content:space-evenly;
+    font-size: 25px;
     margin: 0;
+    font-style: normal;
+}
+
+h4 {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    
+}
+#header-break{
+    flex-basis: 20%;
+    display: flex;
+    justify-content:space-evenly;
+
 }
 
 #header-text {
     flex-basis: 80%;
     display: flex;
-    text-align: center;
-
+    justify-content:space-evenly;
+    font-family: 'Sacramento', cursive;
 }
 
 nav {
@@ -53,4 +70,78 @@ a {
 
 a, p {
     font-family: monospace;
+}
+
+.pagetext {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    width: 100%;
+
+}
+
+.catergorys {
+        color: black;
+        font-size: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: rgba(250, 246, 246, 0.856);
+    width: 20%;
+    border: grey 2px;
+}
+
+.delbutton {
+    border-radius: 25px;
+    background-color: lightgrey;
+    margin: 10px;
+}
+
+.outside {
+    background: rgba(253, 149, 149, 0.699);
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgba(248, 121, 121, 0.87);
+    padding: 10px;
+    width: 40%;
+   
+}
+
+.outsidecreate {
+    background: #e0e0e0cc;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #e0e0e0;
+    padding: 10px;
+    width: 65%;
+}
+
+.outsidestory {
+    background: #e0e0e0cc;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #e0e0e0;
+    padding: 10px;
+    width: 40%;
+}
+
+.font {
+    font-size: 15px;
 }
