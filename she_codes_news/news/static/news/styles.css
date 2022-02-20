@@ -2,8 +2,9 @@
     margin: 2px;
     padding: 10px;
     border-radius: 25px;
-    background: lightgrey;
+    background: rgba(226, 217, 217, 0.767);
     padding: 10px;
+    font-size: 10px;
 }
 
 .story-card img {
@@ -55,13 +56,13 @@
 #story-card-2 .story-card-text h3,
 #story-card-3 .story-card-text h3,
 #story-card-4 .story-card-text h3 {
-    font-size: 16px;
+    font-size: 10px;
 }
 
 #story-card-2 .story-card-text h4,
 #story-card-3 .story-card-text h4,
 #story-card-4 .story-card-text h4 {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 #story-card-2 img,
@@ -86,6 +87,8 @@
 
 #story-content {
     text-align: justify;
+    margin: 20px;
+    padding: 10px;
 }
 
 #story-content img {
@@ -97,4 +100,22 @@
 .hide {
     color:white;
     font-size: xx-small;
+}
+
+#delete {
+    border: 1px black;
+    border-radius: 25px;
+    background:gray;
+}
+
+.outsidestory {
+    background: rgba(253, 149, 149, 0.699);
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgba(248, 121, 121, 0.87);
+    padding: 10px;
+    width: 40%;
 }

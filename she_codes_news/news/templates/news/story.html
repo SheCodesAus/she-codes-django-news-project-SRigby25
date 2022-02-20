@@ -13,26 +13,26 @@ post creater: {{ story.author.id }}</div>
 <div id="story-wrapper">
     <h2 class="pagetext">{{ story.title }}</h2>
     <div class="pagetext">
-        <a href="{% url 'news:author' story.author.id %}"> {{ story.author }} <a> | </a></a>  {{ story.pub_date }}  <a> | </a><a href="{% url 'news:catergory' story.catergory %}"> {{ story.catergory }} <a> | </a></a> 
+    <a href="{% url 'news:author' story.author.id %}"> {{ story.author }} <a> | </a></a>  {{ story.pub_date }}  <a> | </a><a href="{% url 'news:catergory' story.catergory %}"> {{ story.catergory }} <a> | </a></a> 
     {% if request.user.is_authenticated %}
     {% if user.id == story.author.id %}
-        <a href="{% url 'news:editstory' story.id %}">  Edit</a>
-        <a href="{% url 'news:deletestory' story.id %}"> | Delete</a>
+            <a href="{% url 'news:editstory' story.id %}">  Edit</a>
+            <a href="{% url 'news:deletestory' story.id %}"> | Delete</a>
     {% endif %}
-
+    {% endif %}
     </div>
-    <div id="story-content">
-        <img src="{{ story.image }}">
-        {{ story.content|linebreaks }}
+<div id="story-content">
+    <img src="{{ story.image }}">
+    {{ story.content|linebreaks }}
+</div>
 
 
+   
 
 
-{% endif %}
     
 </div>
 
 
 
 {% endblock %}
-

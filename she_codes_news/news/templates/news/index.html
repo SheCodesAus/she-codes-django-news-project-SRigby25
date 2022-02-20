@@ -8,13 +8,6 @@
 
 {% block content %}
 
-<div class="pagetext">
-{% if request.user.is_authenticated  %}
-<button class="button"><a href="{% url 'news:newStory' %}">Write New Story</a></button>
-{% else %}
-<button class="button"><a href="{% url 'login' %}">Sign in to write story</a></button>
-{% endif %}
-</div>
 <h2 class="pagetext">News</h2>
 
 <div class="catergorys">
@@ -25,10 +18,13 @@
 <a href="{% url 'news:catergory' 'other' %}">Other</a>
 </div>
 
-
-
-
-
+<div class="pagetext">
+  {% if request.user.is_authenticated  %}
+  <button class="button"><a href="{% url 'news:newStory' %}">Write New Story</a></button>
+  {% else %}
+  <button class="button"><a href="{% url 'login' %}">Sign in to write story</a></button>
+  {% endif %}
+</div>
 
 <div id="all-stories">
   {% if all_stories %}
