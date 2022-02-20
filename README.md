@@ -2,10 +2,10 @@
 
 Starter code for the Plus Django project.
 
-https://safe-wildwood-81522.herokuapp.com
+https://safe-wildwood-81522.herokuapp.com/news
 
 Thats already exists 
-Username:
-Password:
+Username: Hayley
+Password: Petpassword
 
 Screenshot directory
