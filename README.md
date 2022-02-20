@@ -7,3 +7,5 @@ https://safe-wildwood-81522.herokuapp.com
 Thats already exists 
 Username:
 Password:
+
+Screenshot directory

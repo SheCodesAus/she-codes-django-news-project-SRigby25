@@ -22,16 +22,24 @@ h1 {
 h2 {
     font-family: 'Sacramento', cursive;
     font-size: 3rem;
+    font-style: normal;
+    margin: 2px;
+    padding: 5px;
 }
 
 h3 {
-    font-size: 2rem;
+    display: flex;
+    justify-content:space-evenly;
+    font-size: 25px;
     margin: 0;
+    font-style: normal;
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 10px;
     margin: 0;
+    padding: 0;
+    
 }
 #header-break{
     flex-basis: 20%;
@@ -111,25 +119,29 @@ a, p {
 }
 
 .outsidecreate {
-    background: rgba(253, 149, 149, 0.699);
+    background: #e0e0e0cc;
     border-radius: 25px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 5px solid rgba(248, 121, 121, 0.87);
+    border: 5px solid #e0e0e0;
     padding: 10px;
     width: 65%;
 }
 
 .outsidestory {
-    background: rgba(253, 149, 149, 0.699);
+    background: #e0e0e0cc;
     border-radius: 25px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: 5px solid rgba(248, 121, 121, 0.87);
+    border: 5px solid #e0e0e0;
     padding: 10px;
     width: 40%;
+}
+
+.font {
+    font-size: 15px;
 }
