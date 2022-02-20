@@ -123,7 +123,7 @@ a, p {
     border-radius: 25px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
     border: 5px solid #e0e0e0;
     padding: 10px;
@@ -133,9 +133,9 @@ a, p {
 .outsidestory {
     background: #e0e0e0cc;
     border-radius: 25px;
-    position: absolute;
+    position:absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
     border: 5px solid #e0e0e0;
     padding: 10px;

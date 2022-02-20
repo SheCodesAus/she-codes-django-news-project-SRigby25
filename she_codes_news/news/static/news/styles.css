@@ -110,7 +110,7 @@
     border-radius: 25px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
     border: 5px solid rgba(248, 121, 121, 0.87);
     padding: 10px;
