@@ -8,19 +8,17 @@
 
 {% block content %}
 
-{% if request.user.is_authenticated  %}
-<a href="{% url 'news:newStory' %}">Write New Story</a>
-{% else %}
-<a href="{% url 'login' %}">Sign in to write story</a>
-{% endif %}
-
-<a href="{% url 'news:catergory' 'cat' %}">Cat's</a>
-<a href="{% url 'news:catergory' 'dog' %}">Dog's</a>
-<a href="{% url 'news:catergory' 'horse' %}">Horse's</a>
-<a href="{% url 'news:catergory' 'duck' %}">Duck's</a>
-<a href="{% url 'news:catergory' 'other' %}">Other</a>
 
 
+  
+  <div class="catergorys">
+  <a href="{% url 'news:catergory' 'cat' %}">Cats</a>
+  <a href="{% url 'news:catergory' 'dog' %}">Dogs</a>
+  <a href="{% url 'news:catergory' 'horse' %}">Horses</a>
+  <a href="{% url 'news:catergory' 'duck' %}">Ducks</a>
+  <a href="{% url 'news:catergory' 'other' %}">Other</a>
+  </div>
+  
 
 <div id="all-stories">
   {% if storys %}

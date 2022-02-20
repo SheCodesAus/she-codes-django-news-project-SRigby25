@@ -8,20 +8,25 @@
 
 {% block content %}
 
+<div class="pagetext">
 {% if request.user.is_authenticated  %}
-<a href="{% url 'news:newStory' %}">Write New Story</a>
+<button class="button"><a href="{% url 'news:newStory' %}">Write New Story</a></button>
 {% else %}
-<a href="{% url 'login' %}">Sign in to write story</a>
+<button class="button"><a href="{% url 'login' %}">Sign in to write story</a></button>
 {% endif %}
+</div>
+<h2 class="pagetext">News</h2>
 
-
-
-<a href="{% url 'news:catergory' 'cat' %}">Cat's</a>
-<a href="{% url 'news:catergory' 'dog' %}">Dog's</a>
-<a href="{% url 'news:catergory' 'horse' %}">Horse's</a>
-<a href="{% url 'news:catergory' 'duck' %}">Duck's</a>
+<div class="catergorys">
+<a href="{% url 'news:catergory' 'cat' %}">Cats</a>
+<a href="{% url 'news:catergory' 'dog' %}">Dogs</a>
+<a href="{% url 'news:catergory' 'horse' %}">Horses</a>
+<a href="{% url 'news:catergory' 'duck' %}">Ducks</a>
 <a href="{% url 'news:catergory' 'other' %}">Other</a>
-<h2>News</h2>
+</div>
+
+
+
 
 
 

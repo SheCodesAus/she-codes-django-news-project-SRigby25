@@ -1,13 +1,21 @@
 .story-card {
     margin: 2px;
-    border: 1px solid #000;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 25px;
+    background: lightgrey;
+    padding: 10px;
 }
 
 .story-card img {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    margin: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 25px;
+
 }
 
 #latest-stories {
@@ -61,7 +69,7 @@
 #story-card-4 img {
     width: 33%;
     height: 100%;
-    margin-right: 5px;
+    margin: 5px;
 }
 
 #all-stories {
@@ -71,8 +79,9 @@
 }
 
 #all-stories .story-card {
-    flex-basis: 32%;
+    flex-basis: 20%;
     flex-grow: 1;
+    margin: 5%;
 }
 
 #story-content {
@@ -83,4 +92,9 @@
     float: right;
     margin: 0 0 10px 10px;
     width: 50%;
+}
+
+.hide {
+    color:white;
+    font-size: xx-small;
 }
