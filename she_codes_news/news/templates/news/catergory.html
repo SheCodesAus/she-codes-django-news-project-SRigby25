@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}" />
+
+{% endblock %} 
+
+{% block content %}
+
+
+
+  
+  <div class="catergorys">
+  <a href="{% url 'news:catergory' 'cat' %}">Cats</a>
+  <a href="{% url 'news:catergory' 'dog' %}">Dogs</a>
+  <a href="{% url 'news:catergory' 'horse' %}">Horses</a>
+  <a href="{% url 'news:catergory' 'duck' %}">Ducks</a>
+  <a href="{% url 'news:catergory' 'other' %}">Other</a>
+  </div>
+  
+
+<div id="all-stories">
+  {% if storys %}
+    {% for story in storys %}
+  {% include "./storyCard.html" with story=story %}
+  {% endfor %} {% else %}
+  <p>No stories are available.</p>
+  {% endif %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="pagetext">Create Account</h2>
+
+<div class="outsidecreate">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="pagetext">
+    <button type="submit">Create Account</button>
+    </div>
+</form>
+<div
+{% endblock %}

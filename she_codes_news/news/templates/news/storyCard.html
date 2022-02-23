@@ -1,14 +1,15 @@
 <div class="story-card" id="story-card-{{ position }}">
-    <a href="">
+    <a href="{% url 'news:story' story.id %} ">
         {% if position < 5 %}
-            <img src="../static/news/images/placeholder-{{ position }}.jpg">
+            <img src="{{ story.image }}">
         {% else %}
-            <img src="https://picsum.photos/600">
+            <img src="{{ story.image }}">
         {% endif %}
         <div class="story-card-text">
             <h3>{{ story.title }}</h3>
-            <h4>{{ story.author }}</h4>
             <h4>{{ story.pub_date }}</h4>
+            <h4>{{ story.author }}</h4>
+            <h4><a href="{% url 'news:catergory' story.catergory %}">{{ story.catergory }}</a></h4>    
         </div>
     </a>
 </div>
